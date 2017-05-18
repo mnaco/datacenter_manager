@@ -1,25 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>title</title>
-		<link rel="stylesheet" href="css/main.css">
-		<script src="js/app.js"></script>
-	</head>
-	<body>
-	<!-- page content -->
-	</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+	<title>Datacenter Manager</title>
 </head>
 <body>
+
+	<div class="bodyContainer">
 	
+		<div class="containerControls">
+			<!-- server control center -->
+			<div class="serversControl">
+				<button class="btnAdd addServer" id="new-server">Add Server</button>
+				<button class="btnRemove destroyServer" id="destroy-server">Destroy Server</button>
+			</div>
+			<!-- END server control center -->
+			<!-- apps list -->
+			<div class="appsList" id="appsList">
+				<h4>Available Apps</h4>
+				<ul class="reset">
+					<li class="appHadoop" data-server-app="Hadoop">
+						<span>Hadoop</span>
+						<button class="btnAdd addApp"></button>
+						<button class="btnRemove removeApp"></button>
+					</li>
+					<li class="appRails" data-server-app="Rails">
+						<span>Rails</span>
+						<button class="btnAdd addApp"></button>
+						<button class="btnRemove removeApp"></button>
+					</li>
+					<li class="appChronos" data-server-app="Chronos">
+						<span>Chronos</span>
+						<button class="btnAdd addApp"></button>
+						<button class="btnRemove removeApp"></button>
+					</li>
+					<li class="appStorm" data-server-app="Storm">
+						<span>Storm</span>
+						<button class="btnAdd addApp"></button>
+						<button class="btnRemove removeApp"></button>
+					</li>
+					<li class="appSpark" data-server-app2="Spark">
+						<span>Spark</span>
+						<button class="btnAdd addApp"></button>
+						<button class="btnRemove removeApp"></button>
+					</li>
+				</ul>
+			</div>
+			<!-- END apps list -->
+		</div>
+
+		<div class="containerServers">
+			<!-- servers list -->
+			<div id="serversList" class="serversList">
+				<h1>Server Canvas</h1>
+				<ul class="reset">
+					<li><div><article></article></div></li>
+					<li>
+						<div class="appRails" data-server-app="Rails"><article><h3>Ra</h3><h4>Rails</h4>32 min ago</article></div>
+						<div class="appChronos" data-server-app="Chronos"><article><h3>Ch</h3><h4>Chronos</h4>32 min ago</article></div>
+					</li>
+					<li>
+						<div class="appHadoop" data-server-app="Hadoop"><article><h3>Ha</h3><h4>Hadoop</h4>2 days ago</article></div>
+					</li>
+					<li>
+						<div class="appRails" data-server-app="Rails"><article><h3>Ra</h3><h4>Rails</h4>32 min ago</article></div>
+					</li>
+					<li>
+						<div class="appStorm" data-server-app="Storm"><article><h3>St</h3><h4>Storm</h4>4 minutes ago</article></div>
+					</li>
+					<li><div><article></article></div></li>
+				</ul>
+			</div>
+			<!-- END servers list -->
+		</div>
+
+	</div>
+	
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/app.js"></script>
 </body>
 </html>
